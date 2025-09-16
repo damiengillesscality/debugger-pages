@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Line-of-Code Breakpoints</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exercise-header">
+            <h1>Exercise 2: Line-of-Code Breakpoints</h1>
+            <p>Learn to set breakpoints and understand the call stack</p>
+        </header>
+
+        <main class="exercise-content">
+            <div class="progress-indicator">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Step 1 of 2</p>
+            </div>
+
+            <div class="instruction-box">
+                <h3>🎯 Your Mission</h3>
+                <p>Set a line-of-code breakpoint and learn to inspect the call stack and variables during execution.</p>
+            </div>
+
+            <div id="step1" class="step-content">
+                <h2>Step 1: Understanding the Code</h2>
+                <p>First, let's examine the code we'll be debugging. Open the Sources tab and find <code>page2.js</code> in the file tree.</p>
+
+                <div class="warning-box">
+                    <strong>📍 Your Task:</strong>
+                    <ol>
+                        <li>Find <code>page2.js</code> in the Sources tab file tree</li>
+                        <li>Click on the line number <strong>5</strong>
+                        <li>A red dot should appear - this is your breakpoint!</li>
+                        <li>The browser stops the execution when it hits the breakpoint.</li>
+                        <li>Observe the Scopes values, what does `whatIsMyAge` contains ?</li>
+                        <li>Remove the breakpoint and click the resume button (▶️) to continue</li>
+                    </ol>
+                </div>
+
+                <div class="instruction-box">
+                    <strong>💡 About the debugger statement:</strong>
+                    <p>You can also use <code>debugger;</code> in your code to create automatic breakpoints. It's like a programmatic breakpoint!</p>
+                </div>
+            </div>
+
+            <div id="step2" class="step-content" style="display: none;">
+                <h2>Step 2: Explore the Call Stack</h2>
+                <p>Perfect! You've hit the breakpoint. Set the break point again and let's understand what you're seeing:</p>
+                
+                <div class="instruction-box">
+                    <h4>📚 Understanding the Call Stack</h4>
+                    <p>Look at the <strong>Call Stack</strong> panel (right side of Sources tab). It shows:</p>
+                    <ul>
+                        <li><strong>strangeFunction</strong> - The current function where execution paused</li>
+                        <li><strong>setInterval</strong> - The timer that called our function</li>
+                        <li><strong>init</strong> - This exercise inner init function</li>
+                        <li><strong>Exercise2Controller</strong> - The constructor that track your progress in this exercise, you can easily retro engineer this exercise !</li>
+                    </ul>
+                    <p><strong>💡 Key Point:</strong> The call stack shows how you got to the current point of execution!</p>
+                </div>
+
+                <div class="instruction-box">
+                    <h4>🔍 Examining Variables</h4>
+                    <p>In the <strong>Scope</strong> panel, you can see:</p>
+                    <ul>
+                        <li><strong>Local variables</strong> - Variables in the current function</li>
+                        <li><strong>Script variables</strong> - Variables in the current script page</li>
+                        <li><strong>Global variables</strong> - Variables accessible throughout the whole site scripts</li>
+                        <li>Hover over variables in the code to see their values</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>📍 Your Task:</strong>
+                    <ol>
+                        <li>Explore the call stack and Scope section</li>
+                        <li>Disable all breakpoints to avoid interruptions by clicking the breakpoint icon <img src="disablebreakpoint.png" alt="Disable Breakpoint"></li>
+                        <li>Click the resume button (▶️) to continue execution</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h3>🎉 Breakpoint Master!</h3>
+                <p>You've successfully learned about:</p>
+                <ul>
+                    <li>Setting line-of-code breakpoints</li>
+                    <li>Understanding the call stack</li>
+                    <li>Examining variables in scope</li>
+                    <li>Using resume to continue execution</li>
+                </ul>
+                <p>Next up: Master the step controls for precise debugging!</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="page1.html" class="nav-btn prev">← Exercise 1</a>
+                <a href="page3.html" class="nav-btn next" id="nextBtn" style="opacity: 0.5; pointer-events: none;">Next: Step Controls →</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="page2.js"></script>
+</body>
+</html>

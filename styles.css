@@ -1,0 +1,302 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+.exercise-nav {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.exercise-nav h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.exercise-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.exercise-link {
+    display: block;
+    padding: 1rem;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.exercise-link:hover {
+    border-color: #4a69bd;
+    background: #f8f9ff;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.prerequisites {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.prerequisites h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.prerequisites ul {
+    color: #856404;
+    margin-left: 1.5rem;
+}
+
+.prerequisites li {
+    margin-bottom: 0.5rem;
+}
+
+.start-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a69bd 0%, #667eea 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 105, 189, 0.3);
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 105, 189, 0.4);
+}
+
+/* Exercise Page Styles */
+.exercise-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 100%);
+    color: white;
+    padding: 1.5rem;
+}
+
+.exercise-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.exercise-content {
+    padding: 2rem;
+}
+
+.instruction-box {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.success-box {
+    background: #e8f5e8;
+    border-left: 4px solid #4caf50;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    display: none;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ff9800;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.code-block {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.progress-indicator {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.progress-bar {
+    background: #e9ecef;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-btn.prev {
+    background: #6c757d;
+    color: white;
+}
+
+.nav-btn.next {
+    background: #4a69bd;
+    color: white;
+}
+
+.nav-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .exercise-nav ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

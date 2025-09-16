@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Step Controls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exercise-header">
+            <h1>Exercise 3: Step Controls (Next, Out, Into)</h1>
+            <p>Master precise debugging with step-by-step execution control</p>
+        </header>
+
+        <main class="exercise-content">
+            <div class="progress-indicator">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Step 1 of 2</p>
+            </div>
+
+            <div class="instruction-box">
+                <h3>🎯 Your Mission</h3>
+                <p>Learn to use Step Over, Step Into, and Step Out controls for precise debugging.</p>
+            </div>
+
+            <div id="step1" class="step-content">
+                <h2>Step 1: Understanding the Code Flow</h2>
+                <p>We have a chain of function calls that you'll step through. First, set a breakpoint in the code:</p>
+                
+                <pre class="code-block">
+function processData(input) {
+    debugger; // ← Automatic breakpoint here!
+    const processed = transformValue(input);
+    const result = calculateResult(processed);
+    return finalizeResult(result);
+}
+
+function transformValue(value) {
+    return value * 2;
+}
+
+function calculateResult(processed) {
+    return processed + 10;
+}
+
+function finalizeResult(result) {
+    console.log(`Final result: ${result}`);
+    return result;
+}
+</pre>
+
+                <div class="instruction-box">
+                    <h4>🎮 Step Controls Overview</h4>
+                    <ul>
+                        <li><strong>Step Over (F10)</strong> - Execute current line, don't go into functions</li>
+                        <li><strong>Step Into (F11)</strong> - Enter function calls to debug inside them</li>
+                        <li><strong>Step Out (Shift+F11)</strong> - Exit current function and return to caller</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>📍 Your Task:</strong>
+                    <ul>
+                        <li>Open the Developer Tools, it automatically pauses at the start of the function</li>
+                        <li>Use the step controls until you get to the line where we compute the result (const result = value * 2;)</li>
+                        <li>Click disable breakpoints and resume the code execution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h3>🎉 Step Master!</h3>
+                <p>You've mastered the step controls:</p>
+                <ul>
+                    <li>Step Over - Execute without entering functions</li>
+                    <li>Step Into - Dive deep into function calls</li>
+                    <li>Step Out - Efficiently exit current function</li>
+                </ul>
+                <p>Next: Learn about event listener breakpoints!</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="page2.html" class="nav-btn prev">← Exercise 2</a>
+                <a href="page4.html" class="nav-btn next" id="nextBtn" style="opacity: 0.5; pointer-events: none;">Next: Event Breakpoints →</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="page3.js"></script>
+</body>
+</html>

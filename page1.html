@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Inspector & Source Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exercise-header">
+            <h1>Exercise 1: Opening the Inspector & Source Tab</h1>
+            <p>Learn to navigate the Developer Tools and understand the Source tab structure</p>
+        </header>
+
+        <main class="exercise-content">
+            <div class="progress-indicator">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Step 1 of 3</p>
+            </div>
+
+            <div class="instruction-box">
+                <h3>🎯 Your Mission</h3>
+                <p>Open the Developer Tools and navigate to the Sources tab to explore its structure.</p>
+            </div>
+
+            <div id="step1" class="step-content">
+                <h2>Step 1: Open Developer Tools</h2>
+                
+                <div class="warning-box">
+                    <strong>📍 Your Task:</strong>
+                    <ul>
+                        <li><strong>Windows/Linux:</strong> Press <code>F12</code> or <code>Ctrl + Shift + I</code></li>
+                        <li><strong>Mac:</strong> Press <code>Cmd + Opt + I</code></li>
+                        <li><strong>Right-click:</strong> Right-click on this page and select "Inspect"</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>👀 Detection:</strong> We're monitoring for DevTools opening. Open them now to continue!
+                </div>
+            </div>
+
+            <div id="step2" class="step-content" style="display: none;">
+                <h2>Step 2: Navigate to Sources Tab</h2>
+                <p>Great! The Developer Tools are open. Now:</p>
+
+                <div class="warning-box">
+                    <strong>📍 Your Task:</strong>
+                    <ol>
+                        <li>Look for the <strong>Sources</strong> tab in the Developer Tools</li>
+                        <li>Click on it to open the Sources panel</li>
+                        <li>Click on <code>page1.js</code> in the file tree</li>
+                        <li>Follow the instruction in the comment on the top of page1.js that should show in the editor to continue</li>
+                    </ol>
+                </div>
+
+                <div class="instruction-box">
+                    <strong>🔍 What you should see:</strong>
+                    <p>The Sources tab typically appears at the top of the Developer Tools, next to Elements, Console, etc.</p>
+                </div>
+            </div>
+
+            <div id="step3" class="step-content" style="display: none;">
+                <h2>Step 3: Explore the Sources Tab Structure</h2>
+                <p>Perfect! You're now in the Sources tab. Let me explain what you're seeing:</p>
+                
+                <div class="instruction-box">
+                    <h4>📁 Page Tab (File Tree)</h4>
+                    <p>On the left side, you'll see a file tree showing all files that this page requests:</p>
+                    <ul>
+                        <li><strong>HTML files</strong> - The webpage structure</li>
+                        <li><strong>CSS files</strong> - Stylesheets for appearance</li>
+                        <li><strong>JavaScript files</strong> - Scripts that make the page interactive</li>
+                        <li><strong>Images and other assets</strong> - Resources loaded by the page</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-box">
+                    <h4>📝 Code Editor Section</h4>
+                    <p>In the center, you'll see the code editor:</p>
+                    <ul>
+                        <li>Click on any file in the file tree to view its contents here</li>
+                        <li>Line numbers are shown on the left</li>
+                        <li>You can click on line numbers to set breakpoints</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-box">
+                    <h4>🐛 Debugger Section</h4>
+                    <p>On the right side, you'll find various debugging tools:</p>
+                    <ul>
+                        <li><strong>Scope</strong> - Shows local and global variables</li>
+                        <li><strong>Watch</strong> - Monitor specific expressions</li>
+                        <li><strong>Call Stack</strong> - Shows function call hierarchy</li>
+                        <li><strong>Breakpoints</strong> - Lists all your breakpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h3>🎉 Congratulations!</h3>
+                <p>You've successfully completed Exercise 1! You now understand:</p>
+                <ul>
+                    <li>How to open Developer Tools</li>
+                    <li>How to navigate to the Sources tab</li>
+                    <li>The three main sections of the Sources tab</li>
+                </ul>
+                <p>Ready for the next challenge? Let's learn about breakpoints!</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn prev">← Back to Menu</a>
+                <a href="page2.html" class="nav-btn next" id="nextBtn" style="opacity: 0.5; pointer-events: none;">Next: Breakpoints →</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="page1.js"></script>
+</body>
+</html>

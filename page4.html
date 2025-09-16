@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Event Listener Breakpoints</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exercise-header">
+            <h1>Exercise 4: Event Listener Breakpoints</h1>
+            <p>Learn to debug user interactions and understand variable scope</p>
+        </header>
+
+        <main class="exercise-content">
+            <div class="progress-indicator">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Step 0 of 1</p>
+            </div>
+
+            <div class="instruction-box">
+                <h3>🎯 Your Mission</h3>
+                <p>Set event listener breakpoints to debug mouse interactions.</p>
+            </div>
+
+            <div id="step1" class="step-content">
+                <h2>Step 1: Setting Up Event Listener Breakpoints</h2>
+                <p>Event listener breakpoints pause execution when specific events occur, perfect for debugging user interactions.</p>
+                
+                <div class="instruction-box">
+                    <h4>🔧 How to Set Event Listener Breakpoints</h4>
+                    <ol>
+                        <li>In the Sources tab, look for the <strong>"Event Listener Breakpoints"</strong> panel (right side)</li>
+                        <li>Expand the <strong>"Mouse"</strong> category</li>
+                        <li>Check the box next to <strong>"mouseup"</strong></li>
+                        <li>Now any mouseup event will trigger a breakpoint!</li>
+                    </ol>
+                </div>
+
+                <div class="warning-box">
+                    <strong>🎮 Interactive Element Below:</strong>
+                    <p>Once you've set the mouseup breakpoint, click and release the button below to trigger it!</p>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <button id="interactiveBtn" class="start-btn" style="padding: 2rem 3rem; font-size: 1.2rem;">
+                        🎯 Click Me to Test Event Breakpoint!
+                    </button>
+                </div>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h3>🎉 Event Debugging Expert!</h3>
+                <p>You've mastered:</p>
+                <ul>
+                    <li>Setting event listener breakpoints</li>
+                    <li>Debugging user interaction events</li>
+                    <li>Understanding when breakpoints trigger</li>
+                </ul>
+                <p>Ready for the final challenge? Let's fix some code!</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="page3.html" class="nav-btn prev">← Exercise 3</a>
+                <a href="page5.html" class="nav-btn next" id="nextBtn" style="opacity: 0.5; pointer-events: none;">Next: Watch & Fix →</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="page4.js"></script>
+</body>
+</html>

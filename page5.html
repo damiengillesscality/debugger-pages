@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5: Watch and Fix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exercise-header">
+            <h1>Exercise 5: Watch and Fix</h1>
+            <p>Debug the classic "5" + "1" problem using watch expressions and live editing</p>
+        </header>
+
+        <main class="exercise-content">
+            <div class="progress-indicator">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Step 1 of 2</p>
+            </div>
+
+            <div class="instruction-box">
+                <h3>🎯 Your Mission</h3>
+                <p>Discover and fix a common JavaScript bug using watch expressions and in-debugger code editing.</p>
+            </div>
+
+            <div id="step1" class="step-content">
+                <h2>Step 1: The Bug</h2>
+                <p>We have a calculator that should add two numbers, but something's wrong...</p>
+
+                <div class="warning-box">
+                    <strong>🐛 The Problem:</strong>
+                    <p>When we call <code>calculateSum("5", "1")</code>, we expect to get <code>6</code>, but we get <code>"51"</code> instead!</p>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <button id="triggerBugBtn" class="start-btn">🧮 Trigger the Buggy Calculation</button>
+                </div>
+                
+                <div id="calculationResult" class="code-block">
+                    <h4>Calculation Results:</h4>
+                    <p>Input A: <span id="inputA">Not calculated yet</span></p>
+                    <p>Input B: <span id="inputB">Not calculated yet</span></p>
+                    <p>Result: <span id="result">Not calculated yet</span></p>
+                    <p>Expected: <span id="expected">6</span></p>
+                    <p>Status: <span id="status">❌ Bug not fixed</span></p>
+                </div>
+            </div>
+
+            <div id="step2" class="step-content" style="display: none;">
+                <h2>Step 2: Watch and Fix</h2>
+                <p>Now let's investigate and fix the bug using the debugger tools!</p>
+                
+                <div class="instruction-box">
+                    <h4>🔍 Create a Watch Expression</h4>
+                    <ol>
+                        <li>Open the <strong>Sources</strong> tab in Developer Tools</li>
+                        <li>Find the <strong>"Watch"</strong> panel on the right side</li>
+                        <li>Click the <strong>"+"</strong> button to add a watch expression</li>
+                        <li>Add this watch expression: <code>typeof window.sum</code></li>
+                        <li>This will help you see what type the sum variable is</li>
+                    </ol>
+                </div>
+
+                <div class="instruction-box">
+                    <h4>🛠️ Edit JavaScript in the Debugger</h4>
+                    <p>You can edit JavaScript files directly in the Sources tab:</p>
+                    <ol>
+                        <li>In the Sources tab, click on <code>page5.js</code> in the file tree</li>
+                        <li>Find the line with the bug in the <code>calculateSum</code> function</li>
+                        <li>Click on the line to edit it</li>
+                        <li>Fix the bug by converting strings to numbers</li>
+                        <li>Press <strong>Ctrl+S</strong> (or <strong>Cmd+S</strong> on Mac) to save</li>
+                    </ol>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <button id="testFixBtn" class="start-btn">🧪 Test Your Fix</button>
+                </div>
+            </div>
+
+            <div class="success-box" id="successBox">
+                <h3>🎉 Bug Fixed!</h3>
+                <p>Congratulations! You've successfully:</p>
+                <ul>
+                    <li>Identified the string concatenation bug</li>
+                    <li>Used watch expressions to investigate variable types</li>
+                    <li>Edited JavaScript code directly in the debugger</li>
+                    <li>Fixed the calculation to work correctly</li>
+                </ul>
+                <p>You've completed all debugging exercises!</p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="page4.html" class="nav-btn prev">← Exercise 4</a>
+                <a href="index.html" class="nav-btn next" id="nextBtn" style="opacity: 0.5; pointer-events: none;">🏁 Course Complete →</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="page5.js"></script>
+</body>
+</html>
